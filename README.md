@@ -38,11 +38,11 @@ export default function Button({ title }) {
 }
 ```
 
-### Editamos este componente y cuando lo terminamos.
-
 Añadimos eso al **`stage`** y cuando vamos a hacer commit hacemos esto.
 
 **`new(Button.jsx): Añadí un componente boton que recibe un titulo como props✨.`**
+
+### Editamos este componente y cuando lo terminamos.
 
 ```jsx
 export default function Button({ title }) {
