@@ -24,7 +24,7 @@
 
 **`docs(README o Code): Descripción de lo que comentó del codigo Emoji`**.
 
-## Ejemplo de algo nuevo en el repositorio.
+## Ejemplo de algo nuevo en el repositorio
 
 ### Queremos subir esto nuevo en nuestro repositorio porque ya lo terminamos.
 
