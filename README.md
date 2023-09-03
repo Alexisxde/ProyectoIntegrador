@@ -18,11 +18,11 @@
 
 ## Como hacer un commit
 
-**`new(Componente o Función):** Descripción de lo añadió al repositorio **Emoji`**.
+**`new(Componente o Función): Descripción de lo añadió al repositorio Emoji`**.
 
-**`edit(Componente o Función):** Descripción de lo editó del codigo **Emoji`**.
+**`edit(Componente o Función): Descripción de lo editó del codigo Emoji`**.
 
-**`docs(README o Code):** Descripción de lo que comentó del codigo **Emoji`**.
+**`docs(README o Code): Descripción de lo que comentó del codigo Emoji`**.
 
 ## Ejemplo de algo nuevo en el repositorio.
 
