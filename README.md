@@ -73,12 +73,12 @@ Añadimos eso al **`stage`** y cuando vamos a hacer el commit hacemos esto.
 λ py -m venv my_venv
 🖿/example-django
 λ .\my_venv\Scripts\activate
-🖿/example-django
+(my_venv) 🖿/example-django
 λ pip install django
-🖿/example-django
+(my_venv) 🖿/example-django
 λ django-admin startproject my_app .
-🖿/example-django
-λ py manage.py runserver
+(my_venv) 🖿/example-django
+λ py manage.py runserver PORT?
 ```
 
-`Starting server at` [`https://localhost:8000`](https://localhost:8000)
+`Starting server default` [`https://localhost:8000`](https://localhost:8000)
