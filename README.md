@@ -65,3 +65,20 @@ Añadimos eso al **`stage`** y cuando vamos a hacer el commit hacemos esto.
 - Para editar el ultimo commit: `git commit --amend`
 - Para ver si se editó el commit: `git log --oneline`
 - Para guardar el cambio en el repositorio: `git push --force`
+
+## Install Django Proyect
+
+```bash
+🖿/example-django
+λ py -m venv my_venv
+🖿/example-django
+λ .\my_venv\Scripts\activate
+🖿/example-django
+λ pip install django
+🖿/example-django
+λ django-admin startproject my_app .
+🖿/example-django
+λ py manage.py runserver
+```
+
+`Starting server at` [`https://localhost:8000`](https://localhost:8000)
