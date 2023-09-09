@@ -88,17 +88,41 @@ Añadimos eso al **`stage`** y cuando vamos a hacer el commit hacemos esto.
 **Clonamos el repositorio.**
 
 ```bash
-git clone https://github.com/Alexisxde/TP-Argentina-Programa.git
+🖿/~
+λ git clone https://github.com/Alexisxde/TP-Argentina-Programa.git
 ```
 
 **Nos vamos a la carpeta que clonó del repositorio.**
 
 ```bash
-cd TP-Argentina-Programa
+🖿/~
+λ cd TP-Argentina-Programa
+```
+
+**Instalamos el entorno virtual.**
+
+```bash
+🖿/TP-Argentina-Programa
+λ py -m venv my_venv
+```
+
+**Activamos el entorno virtual.**
+
+```bash
+🖿/TP-Argentina-Programa
+λ .\.venv\Scripts\activate
 ```
 
 **Abrimos con _Visual Studio Code_ la carpeta/proyecto.**
 
 ```bash
-code .
+(.venv) 🖿/TP-Argentina-Programa
+λ code .
+```
+
+**Para correr el proyecto** _(Por defecto es el PORT **8000**, donde esta PORT podemos poner el puerto donde se va abrir el proyeto ejemplo el 3000)_
+
+```bash
+(.venv) 🖿/TP-Argentina-Programa
+λ py manage.py runserver PORT?
 ```
