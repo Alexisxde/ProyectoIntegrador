@@ -90,11 +90,29 @@ Añadimos eso al **`stage`** y cuando vamos a hacer el commit hacemos esto.
 ```bash
 🖿/~
 λ git clone https://github.com/Alexisxde/TP-Argentina-Programa.git
+🖿/~
+λ git clone https://github.com/Alexisxde/TP-Argentina-Programa.git
 ```
 
 **Nos vamos a la carpeta que clonó del repositorio.**
 
 ```bash
+🖿/~
+λ cd TP-Argentina-Programa
+```
+
+**Instalamos el entorno virtual.**
+
+```bash
+🖿/TP-Argentina-Programa
+λ py -m venv my_venv
+```
+
+**Activamos el entorno virtual.**
+
+```bash
+🖿/TP-Argentina-Programa
+λ .\.venv\Scripts\activate
 🖿/~
 λ cd TP-Argentina-Programa
 ```
