@@ -96,7 +96,7 @@ Añadimos eso al **`stage`** y cuando vamos a hacer el commit hacemos esto.
 
 ```bash
 🖿/~
-λ cd /TP-Argentina-Programa
+λ cd TP-Argentina-Programa
 ```
 
 **Instalamos el entorno virtual.**
