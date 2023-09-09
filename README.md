@@ -113,6 +113,13 @@ Añadimos eso al **`stage`** y cuando vamos a hacer el commit hacemos esto.
 λ .\.venv\Scripts\activate
 ```
 
+**Instalamos Django.**
+
+```bash
+(.venv) 🖿/TP-Argentina-Programa
+λ pip install django
+```
+
 **Abrimos con _Visual Studio Code_ la carpeta/proyecto.**
 
 ```bash
