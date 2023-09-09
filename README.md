@@ -82,3 +82,23 @@ Añadimos eso al **`stage`** y cuando vamos a hacer el commit hacemos esto.
 ```
 
 `Starting server default` [`https://localhost:8000`](https://localhost:8000)
+
+## Empezar con el proyecto los colaboradores
+
+**Clonamos el repositorio.**
+
+```bash
+git clone https://github.com/Alexisxde/TP-Argentina-Programa.git
+```
+
+**Nos vamos a la carpeta que clonó del repositorio.**
+
+```bash
+cd TP-Argentina-Programa
+```
+
+**Abrimos con _Visual Studio Code_ la carpeta/proyecto.**
+
+```bash
+code .
+```
