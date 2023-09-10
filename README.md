@@ -18,13 +18,13 @@
 
 ## Como hacer un commit
 
-**`new`(Componente o Función):** Descripción de lo añadió al repositorio **Emoji**.
+**`new(Componente o Función): Descripción de lo añadió al repositorio Emoji`**.
 
-**`edit`(Componente o Función):** Descripción de lo editó del codigo **Emoji**.
+**`edit(Componente o Función): Descripción de lo editó del codigo Emoji`**.
 
-**`docs`(README o Code):** Descripción de lo que comentó del codigo **Emoji**.
+**`docs(README o Code): Descripción de lo que comentó del codigo Emoji`**.
 
-## Ejemplo de algo nuevo en el repositorio.
+## Ejemplo de algo nuevo en el repositorio
 
 ### Queremos subir esto nuevo en nuestro repositorio porque ya lo terminamos.
 
@@ -38,11 +38,11 @@ export default function Button({ title }) {
 }
 ```
 
-### Editamos este componente y cuando lo terminamos.
-
 Añadimos eso al **`stage`** y cuando vamos a hacer commit hacemos esto.
 
 **`new(Button.jsx): Añadí un componente boton que recibe un titulo como props✨.`**
+
+### Editamos este componente y cuando lo terminamos.
 
 ```jsx
 export default function Button({ title }) {
@@ -65,3 +65,71 @@ Añadimos eso al **`stage`** y cuando vamos a hacer el commit hacemos esto.
 - Para editar el ultimo commit: `git commit --amend`
 - Para ver si se editó el commit: `git log --oneline`
 - Para guardar el cambio en el repositorio: `git push --force`
+
+## Install Django Proyect
+
+```bash
+🖿/example-django
+λ py -m venv my_venv
+🖿/example-django
+λ .\my_venv\Scripts\activate
+(my_venv) 🖿/example-django
+λ pip install django
+(my_venv) 🖿/example-django
+λ django-admin startproject my_app .
+(my_venv) 🖿/example-django
+λ py manage.py runserver PORT?
+```
+
+`Starting server default` [`https://localhost:8000`](https://localhost:8000)
+
+## Empezar con el proyecto los colaboradores
+
+**Clonamos el repositorio.**
+
+```bash
+🖿/~
+λ git clone https://github.com/Alexisxde/TP-Argentina-Programa.git
+```
+
+**Nos vamos a la carpeta que clonó del repositorio.**
+
+```bash
+🖿/~
+λ cd TP-Argentina-Programa
+```
+
+**Instalamos el entorno virtual.**
+
+```bash
+🖿/TP-Argentina-Programa
+λ py -m venv .venv
+```
+
+**Activamos el entorno virtual.**
+
+```bash
+🖿/TP-Argentina-Programa
+λ .\.venv\Scripts\activate
+```
+
+**Instalamos Django.**
+
+```bash
+(.venv) 🖿/TP-Argentina-Programa
+λ pip install django
+```
+
+**Abrimos con _Visual Studio Code_ la carpeta/proyecto.**
+
+```bash
+(.venv) 🖿/TP-Argentina-Programa
+λ code .
+```
+
+**Para correr el proyecto** _(Por defecto es el PORT **8000**, donde esta PORT podemos poner el puerto donde se va abrir el proyeto ejemplo el 3000)_
+
+```bash
+(.venv) 🖿/TP-Argentina-Programa
+λ py manage.py runserver PORT?
+```
