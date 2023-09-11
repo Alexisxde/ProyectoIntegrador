@@ -133,3 +133,12 @@ Añadimos eso al **`stage`** y cuando vamos a hacer el commit hacemos esto.
 (.venv) 🖿/TP-Argentina-Programa
 λ py manage.py runserver PORT?
 ```
+
+## Usuario y Contraseña para entrar en el panel administrador de Django
+
+[`http://localhost:8000/admin/`](http://localhost:8000/admin/)
+
+```
+Username: admin
+Password: admin
+```
