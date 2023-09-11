@@ -145,6 +145,21 @@ Password: admin
 
 ## Carpetas o archivos que no se suben al repositorio
 
-- 🖿/migrations
 - 🖿/**pycache**
 - db.sqlite3
+
+## Cuando cambiamos algo de la base de datos (models) primero tenemos que hacer:
+
+```bash
+(.venv) 🖿/TP-Argentina-Programa
+λ py manage.py makemigrations
+```
+
+Se hace eso para editar las tablas o crear más tablas en la db.
+
+```bash
+(.venv) 🖿/TP-Argentina-Programa
+λ py manage.py migrate
+```
+
+Se hace esto para actualizar la base de datos.
