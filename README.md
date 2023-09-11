@@ -142,3 +142,9 @@ Añadimos eso al **`stage`** y cuando vamos a hacer el commit hacemos esto.
 Username: admin
 Password: admin
 ```
+
+## Carpetas o archivos que no se suben al repositorio
+
+- 🖿/migrations
+- 🖿/**pycache**
+- db.sqlite3
