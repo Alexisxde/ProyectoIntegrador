@@ -9,3 +9,12 @@ class User(models.Model):
 
     def __str__(self):
       return self.username
+    
+class Usuario(models.Model):
+    nombre_Apellido=models.CharField(max_length=20)
+    usuario_email = models.EmailField()
+    Contraseña = models.CharField(max_length=15 )
+    Confirmar_contraseña=models.CharField(max_length=15)
+       
+    def __str__(self):
+        return self.nombre_Apellido+ ", "+self.usuario_email  
