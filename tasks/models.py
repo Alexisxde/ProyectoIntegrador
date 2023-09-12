@@ -5,7 +5,8 @@ from django.db import models
 class Tarea(models.Model):
     title = models.CharField(max_length=30)
     description = models.CharField(max_length=200)
-    completed = models.BooleanField(default=False)
+    realizada = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.title + " , " + self.description
+        return self.title + " , " + self.description 
+    
