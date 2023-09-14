@@ -134,32 +134,32 @@ Añadimos eso al **`stage`** y cuando vamos a hacer el commit hacemos esto.
 λ py manage.py runserver PORT?
 ```
 
-## Usuario y Contraseña para entrar en el panel administrador de Django
-
-[`http://localhost:8000/admin/`](http://localhost:8000/admin/)
-
-```
-Username: admin
-Password: admin
-```
-
 ## Carpetas o archivos que no se suben al repositorio
 
 - 🖿/**pycache**
 - db.sqlite3
 
-## Cuando cambiamos algo de la base de datos (models) primero tenemos que hacer:
+## Creamos un archivo llamado "db.sqlite3":
+
+### Migramos las tablas para la base de datos.
 
 ```bash
 (.venv) 🖿/TP-Argentina-Programa
 λ py manage.py makemigrations
 ```
 
-Se hace eso para editar las tablas o crear más tablas en la db.
-
 ```bash
 (.venv) 🖿/TP-Argentina-Programa
 λ py manage.py migrate
 ```
 
-Se hace esto para actualizar la base de datos.
+```bash
+(.venv) 🖿/TP-Argentina-Programa
+λ py manage.py runserver
+```
+
+`En esta pagina se crea un usuario para las tareas` [`http://127.0.0.1:8000/signup/`](http://127.0.0.1:8000/signup/)
+
+`En esta pagina se logea un usuario para ver sus tareas` [`http://127.0.0.1:8000/signin/`](http://127.0.0.1:8000/signin/)
+
+`En esta pagina si el usuario esta logeado puede ver sus tareas` [`http://127.0.0.1:8000/tasks/`](http://127.0.0.1:8000/tasks/)

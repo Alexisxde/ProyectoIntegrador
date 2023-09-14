@@ -1,0 +1,28 @@
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="/">Home</a>
+      </li>
+      {% if user.is_authenticated%}
+      <li>
+        <a href="/tasks">Tasks</a>
+      </li>
+      <li>
+        <a href="/logout">Logout</a>
+      </li>
+      {% else %}
+      <li>
+        <a href="/signup">SignUp</a>
+      </li>
+      <li>
+        <a href="/signin">SignIn</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+  {% block content %} {% endblock %}
+</body>
