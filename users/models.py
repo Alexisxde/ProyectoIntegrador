@@ -1,20 +1,12 @@
 from django.db import models
+from django.contrib.auth.models import User
 
-# Create your models here.
-
-class User(models.Model):
-    username = models.CharField(max_length=20)
-    email = models.CharField(max_length=20)
-    password = models.CharField(max_length=20)
+class Tasks(models.Model):
+    title = models.CharField(max_length=50)
+    description = models.TextField(blank=True)
+    due_date = models.DateField(auto_now_add=True)
+    completed = models.BooleanField(default=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE) # Relacion de tablas y si se elimina el usuario se elimina sus tareas
 
     def __str__(self):
-      return self.username
-    
-class Usuario(models.Model):
-    nombre_Apellido=models.CharField(max_length=20)
-    usuario_email = models.EmailField()
-    Contraseña = models.CharField(max_length=15 )
-    Confirmar_contraseña=models.CharField(max_length=15)
-       
-    def __str__(self):
-        return self.nombre_Apellido+ ", "+self.usuario_email  
+        return self.title + " - by " + self.user.username
