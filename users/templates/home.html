@@ -2,7 +2,8 @@
   <title>Home</title>
 </head>
 <body>
-  {% extends 'base.html' %} {% block content %}
+  {% extends 'base.html' %} 
+  {% block content %}
   <h1>Home</h1>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nobis
@@ -10,5 +11,14 @@
     sapiente aliquid, temporibus eligendi architecto! Molestiae sed
     reprehenderit quis doloremque.
   </p>
-  {% endblock %}
+  {% if user.is_authenticated %}
+<h2>Tus Tareas:</h2>
+<ul>
+    {% for task in tasks %}
+    <li>{{ task.title }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+{% endblock %} 
 </body>
