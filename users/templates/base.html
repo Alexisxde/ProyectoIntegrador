@@ -2,6 +2,11 @@
   <title>Document</title>
 </head>
 <body>
+  <header>
+    {% if user.is_authenticated%}
+    <h1>Hi {{user}}</h1>
+    {% endif %}
+  </header>
   <nav>
     <ul>
       <li>

@@ -3,9 +3,9 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
-from.forms import TasksForm
-from .models import Tasks ## gabriela
-from django.contrib.auth.decorators import login_required  ##gabriela
+from .forms import TasksForm
+from .models import Tasks
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     return render(request, 'home.html')
@@ -32,9 +32,6 @@ def signup(request):
                     "error": "Password no coinciden..."
                 })
 
-##def tasks(request):
-##    return render(request, 'tasks.html')
-
 def signout(request):
     logout(request)
     return redirect("home")
@@ -56,12 +53,6 @@ def signin(request):
                 'form': AuthenticationForm,
                 "error": "Usuario o password incorrectos..."
             })
-
-##def new_task(request):
-##    form = TasksForm(request.POST)
-##    new_task = form.save(commit=False)
-##    new_task.user = request.user
-##    new_task.save()
 
 @login_required
 def tasks(request):
