@@ -88,3 +88,11 @@ def delete_task(request, pk):
         task.delete()
         return redirect('tasks')
     return render(request, 'delete_task.html', {'task': task})
+
+from rest_framework import viewsets
+from .serializer import TaskSerilizer
+from .models import Tasks
+
+class TaskView(viewsets.ModelViewSet):
+    serializer_class = TaskSerilizer
+    queryset = Tasks.objects.all()
