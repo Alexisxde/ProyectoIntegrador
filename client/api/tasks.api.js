@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const tasksAPI = axios.create({
-  baseURL: 'http://localhost:8000/tasks/api/tasks/',
+  baseURL: 'http://localhost:8000/api/tasks/',
 })
 
 export const getAllTasks = () => tasksAPI.get('/')
