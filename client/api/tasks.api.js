@@ -6,5 +6,5 @@ const tasksAPI = axios.create({
 
 export const getAllTasks = () => tasksAPI.get('/')
 export const createTask = task => tasksAPI.post('/', task)
-export const deleteTask = id => tasksAPI.delete(`/${id}`)
-export const editTask = (id, task) => tasksAPI.put(`/${id}`, task)
+export const deleteTask = id => tasksAPI.delete(`/${id}/`)
+export const editTask = (id, task) => tasksAPI.put(`/${id}/`, task)

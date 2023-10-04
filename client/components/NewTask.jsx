@@ -1,6 +1,6 @@
 'use client'
 import Keep from '@/assets/LogoKeep'
-import { useState, useF } from 'react'
+import { useState } from 'react'
 import { createTask } from '@/api/tasks.api'
 
 export default function InputNewTask() {
@@ -10,12 +10,10 @@ export default function InputNewTask() {
     description: '',
     due_date: '',
     completed: false,
-    user: '',
   })
 
   const date = () => {
     const fechaOriginal = new Date()
-
     const año = fechaOriginal.getFullYear()
     const mes = (fechaOriginal.getMonth() + 1).toString().padStart(2, '0')
     const dia = fechaOriginal.getDate().toString().padStart(2, '0')
@@ -23,7 +21,7 @@ export default function InputNewTask() {
     return fechaFormateada
   }
 
-  const handleSave = () => {
+  const handleSave = async () => {
     if (task.title === '') {
       setError(true)
       setTimeout(() => {
@@ -31,17 +29,15 @@ export default function InputNewTask() {
       }, 3000)
       return
     }
-    createTask({
+    await createTask({
       ...task,
       due_date: date(),
-      user: 1, //test
     })
     setTask({
       title: '',
       description: '',
       due_date: '',
       completed: false,
-      user: '',
     })
   }
 
@@ -88,7 +84,7 @@ export default function InputNewTask() {
               d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
             />
           </svg>
-          <p className="text-red-500 text-sm italic mt-3">
+          <p className="text-orange-500 text-sm italic mt-3">
             Please check the fields.
           </p>
         </div>
@@ -96,7 +92,7 @@ export default function InputNewTask() {
         ''
       )}
       <button
-        className="flex text-white bg-pink-500 hover:bg-pink-600 rounded py-1 px-2 m-4"
+        className="flex text-white bg-orange-500 hover:bg-orange-600 rounded py-1 px-2 m-4"
         onClick={() => handleSave()}>
         <Keep />
         Save

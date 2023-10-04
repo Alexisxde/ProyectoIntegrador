@@ -1,10 +1,10 @@
 'use client'
 import LogoClose from '@/assets/LogoClose'
 import { useState } from 'react'
-import { deleteTask } from '@/api/tasks.api'
+import { editTask, deleteTask } from '@/api/tasks.api'
 
 export default function EditText({ task }) {
-  const { id, title, description, completed } = task
+  const { id, title, description, completed, due_date } = task
 
   const [editing, setEditing] = useState(false)
   const [editing2, setEditing2] = useState(false)
@@ -19,12 +19,16 @@ export default function EditText({ task }) {
     setEditing2(true)
   }
 
-  const handleInputKeyPress = e => {
+  const handleInputKeyPress = async e => {
     if (titleEdit !== '') {
       if (e.key === 'Enter') {
         setEditing(false)
         setEditing2(false)
-        updateTask(id, titleEdit, descriptionEdit)
+        await editTask(id, {
+          ...task,
+          title: titleEdit,
+          description: descriptionEdit,
+        })
       }
     }
   }
@@ -75,6 +79,9 @@ export default function EditText({ task }) {
               }
               onClick={handleDescriptionEditClick}>
               {description}
+            </p>
+            <p className="text-center font-semibold text-[9px] text-gray-600">
+              {due_date}
             </p>
           </div>
           <button onClick={() => acceptDelete()}>
